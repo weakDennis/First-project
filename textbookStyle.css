@@ -58,15 +58,10 @@ img {
 	width: 100%;
 }
 
-.columnGap {
-	-webkit-column-count: 4;
-	-moz-column-count: 4;
-	column-count: 4;
-
-	-webkit-column-gap: 20px;
-	-moz-column-gap: 20px;
+.grid {
+	display: grid;
+	grid-template-columns: auto auto auto auto;
 	column-gap: 20px;
-	/* Specifying Column Gap */
 }
 
 p.underText {
@@ -77,49 +72,33 @@ p.underText {
 	transform: translate(0, -20px);
 }
 
-span.hiddenText{
-    display: none;   
-}
-
-.textbookFloat:hover, 
-.hiddenText:hover {
-	transition: all .7s;
-	width: 100%;
-	height: 100%;
-	margin: 0px;
-	border-radius: 1px;
+.textbookFloat {
+	transition: all 0.7s;
+	display: flex;
+	flex-direction: column;
 	background: #fff;
-	box-shadow: 3px 3px;
-    box-shadow: grey;
-        .hiddenText{
-            transition: all .7s;
-            color: white;
-            display: inline;
-            border-style: solid;
-            background: orange;
-            border-radius: 10px;
-            padding-top: 10px;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-bottom: 10px;
-        }
 }
 
-/*.hiddenText:hover {
-    color: white;
-    border-style: solid;
-    background: orange;
-    border-radius: 10px;
-    padding-top: 10px;
-	padding-left: 10px;
-    padding-right: 10px;
-	padding-bottom: 10px;
-    transition: .7s;
-}
-*/
+.textbookFloat:hover {
+	box-shadow: 3px 3px grey;
 
+	.hiddenText {
+		color: white;
+		border-style: solid;
+		background: orange;
+		border-radius: 10px;
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+.hiddenText {
+	transition: all 0.7s;
+	color: black;
+}
 
 h2.mainMenu {
 	color: rgb(179, 8, 8);
 }
-
