@@ -77,7 +77,8 @@ p.underText {
 	transform: translate(0, -20px);
 }
 
-.textbookFloat:hover, hiddenText:hover {
+.textbookFloat:hover,
+.hiddenText:hover {
 	transition: all 1s;
 	width: 100%;
 	height: 100%;
@@ -85,19 +86,27 @@ p.underText {
 	border-radius: 1px;
 	background: #fff;
 	box-shadow: 3px 3px;
-    box-shadow: grey;
+	box-shadow: grey;
+
+	.hiddenText {
+		display: inline;
+	}
+}
+
+.hiddenText {
+	display: none;
 }
 
 .hiddenText:hover {
-    color: white;
-    border-style: solid;
-    background: orange;
-    border-radius: 10px;
-    padding-top: 10px;
+	color: white;
+	border-style: solid;
+	background: orange;
+	border-radius: 10px;
+	padding-top: 10px;
 	padding-left: 10px;
-    padding-right: 10px;
+	padding-right: 10px;
 	padding-bottom: 10px;
-    transition: .5s;
+	transition: 0.5s;
 }
 
 h2.mainMenu {
